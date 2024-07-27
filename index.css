@@ -1,0 +1,14 @@
+#cat
+{
+    position: absolute;
+    top: 200px;
+    left: 10px;
+}
+
+
+
+/* Add this to your existing CSS or inside <style> in HTML */
+.customer {
+    border: 2px solid #000; /* Add a border to make customers more visible */
+    border-radius: 5px; /* Rounded corners for a more appealing look */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Barista Game</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background2.png') no-repeat center center fixed; 
+            position: relative;
+        }
+        canvas {
+            display: block;
+        }
+        .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center; /* Center loading bars */
+        }
+        .coffee-button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-size: cover;
+            cursor: pointer;
+            position: relative;
+        }
+        .loading-bar-container {
+            width: 100px;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        .loading-bar {
+            height: 100%;
+            background: #4caf50;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.5s linear; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div class="button-container">
+        <div class="loading-bar-container">
+            <div id="bar1" class="loading-bar"></div>
+        </div>
+        <button id="coffee1" class="coffee-button" style="background-image: url('THISSS.png');"></button>
+        <div class="loading-bar-container">
+            <div id="bar2" class="loading-bar"></div>
+        </div>
+        <button id="coffee2" class="coffee-button" style="background-image: url('Latte.png');"></button>
+        <div class="loading-bar-container">
+            <div id="bar3" class="loading-bar"></div>
+        </div>
+        <button id="coffee3" class="coffee-button" style="background-image: url('Special.png');"></button>
+    </div>
+    <script src="game.js"></script>
+    <script src="loading.js" type="module"></script> <!-- Link to the new JS file -->
+    <img id="cat" src="cat1.png" alt="" width="100px" height="100px">
+    <img id="cat1" src="cat1.png" alt="" width="100px" height="100px">
+    
+
+</body>
+</html>
